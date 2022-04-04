@@ -1,3 +1,4 @@
+// const {bulmaSlider} = require("./bulma-slider");
 window.HELP_IMPROVE_VIDEOJS = false;
 
 var INTERP_BASE = "https://storage.googleapis.com/nerfies-public/interpolation/stacked";
@@ -20,7 +21,7 @@ function setInterpolationImage(i) {
 }
 
 
-$(document).ready(function() {
+document.onready = function() {
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
@@ -67,15 +68,16 @@ $(document).ready(function() {
     }, false);*/
     preloadInterpolationImages();
 
-    $('#interpolation-slider').on('input', function(event) {
+    document.getElementById('interpolation-slider').oninput = function(event) {
       setInterpolationImage(this.value);
-    });
-    setInterpolationImage(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    };
+	setInterpolationImage(0);
+
+    document.getElementById('interpolation-slider').prop = NUM_INTERP_FRAMES - 1;
 
     bulmaSlider.attach();
 
-})
+}
 
 
 //document.onkeydown = function(event) {
@@ -89,7 +91,7 @@ function keyHandler(event) {
 	// 	replaceImage(img0,viewer);
 	// 	break;
 	case 49: // 1
-		replaceImage(black,viewer);
+		replaceImage(dark,viewer);
 		break;
 	case 50: // 2
 		replaceImage(pre,viewer);
@@ -116,8 +118,10 @@ function replaceImage(newimage,image)
 	image.style.borderColor = newimage.style.borderColor;
 
 	// swap new image in for zoom
-	var ez = $('#'+image.id).data('elevateZoom');
-	ez.swaptheimage(newimage.src,newimage.src);
+
+	// var ez = $('#'+image.id).data('elevateZoom');
+	// let ez = document.getElementById(image.id).data('elevateZoom');12
+	// ez.swaptheimage(newimage.src,newimage.src);
 }
 
 

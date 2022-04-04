@@ -167,6 +167,7 @@ body {
 }
 
 
+
 img.thumbnail
 {
 	border-style: solid;
@@ -189,3 +190,42 @@ img
     width: 890px
 }
 
+
+.rcorners {
+    align-content: center;
+    display: inline-block;
+    border-radius: 10px;
+    border: 3px solid #73AD21;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column-viewer {
+    flex: 70%;
+    padding: 0 0px;
+}
+
+.column-thumbnail {
+    flex: 5%;
+    padding: 0 0px;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+}
+
+.column-viewer img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.column-thumbnail img {
+    margin-top: 8px;
+    vertical-align: middle;
+}

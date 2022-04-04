@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--    https://www.w3schools.com/tags/tag_meta.asp-->
-  <meta charset="utf-8">
-  <meta name="description" content="NAN: Noise-Aware NeRFs for Burst-Denoising">
-  <meta name="keywords" content="IBRNet, ray transformer">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NAN: Noise-Aware NeRFs for Burst-Denoising</title>
- 
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!--    https://www.w3schools.com/tags/tag_meta.asp-->
+    <meta charset="utf-8">
+    <meta name="description" content="NAN: Noise-Aware NeRFs for Burst-Denoising">
+    <meta name="keywords" content="NAN, burst denoising">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NAN: Noise-Aware NeRFs for Burst-Denoising</title>
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+        gtag('js', new Date());
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-<!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">-->
-  <link rel="stylesheet" href="./static/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
 
-<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="./static/js/fontawesome.all.min.js"></script>
     <script src="./static/js/bulma-carousel.min.js"></script>
     <script src="./static/js/bulma-slider.min.js"></script>
     <script src="./static/js/index.js"></script>
-    <script src='./static/js/jquery.elevatezoom.js'></script>
+    <!--    <script src='./static/js/jquery.elevatezoom.js'></script>-->
 </head>
 <body>
 
 
-
 <section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">NAN: Noise-Aware NeRFs for Burst-Denoising</h1>
-          <div class="is-size-5 publication-authors">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">NAN: Noise-Aware NeRFs for Burst-Denoising</h1>
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
               Naama Pearl<sup>1</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://www.viseaon.haifa.ac.il/">Tali Treibitz</a><sup>1</sup>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="http://www.cs.haifa.ac.il/~skorman/">Simon Korman</a><sup>2</sup>,</span>
-          </div>
+                    </div>
 
-          <div class="is-size-5 publication-authors">
+                    <div class="is-size-5 publication-authors">
             <span class="institution-block">
               <span class="instit"><sup>1</sup>Dept. of Marine Technologies,
                 <br>School of Marine Sciences
@@ -66,182 +65,236 @@
                 <br>University of Haifa, Israel
               </span>
             </span>
-<!--            <span class="institution-block">-->
-<!--              <div class="instit">University of Haifa, Israel</div>-->
-<!--            </span>-->
-          </div>
-          <h1 style="font-size:24px;font-weight:bold">CVPR 2022</h1>
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-  <!--             <span class="link-block">
-                <a href="static/paper.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span> -->
-              <span class="link-block">
+                        <!--            <span class="institution-block">-->
+                        <!--              <div class="instit">University of Haifa, Israel</div>-->
+                        <!--            </span>-->
+                    </div>
+                    <h1 style="font-size:24px;font-weight:bold">CVPR 2022</h1>
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <!--             <span class="link-block">
+                                          <a href="static/paper.pdf"
+                                             class="external-link button is-normal is-rounded is-dark">
+                                            <span class="icon">
+                                                <i class="fas fa-file-pdf"></i>
+                                            </span>
+                                            <span>Paper</span>
+                                          </a>
+                                        </span> -->
+                            <span class="link-block">
                 <a href="http://arxiv.org/abs/2102.13090"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="ai ai-arxiv"></i>
+                      <i class="ai ai-arxiv is-size-4"></i>
                   </span>
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- supp PDF Link. -->
-<!--               <span class="link-block">
-                <a href="static/supp.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Supp</span>
-                </a>
-              </span> -->
-              <!-- Video Link.
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              -->
-              <!-- Code Link. -->
-              <span class="link-block">
+                            <!-- supp PDF Link. -->
+                            <!--               <span class="link-block">
+                                            <a href="static/supp.pdf"
+                                               class="external-link button is-normal is-rounded is-dark">
+                                              <span class="icon">
+                                                  <i class="fas fa-file-pdf"></i>
+                                              </span>
+                                              <span>Supp</span>
+                                            </a>
+                                          </span> -->
+                            <!-- Video Link.
+                            <span class="link-block">
+                              <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                                 class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                    <i class="fab fa-youtube"></i>
+                                </span>
+                                <span>Video</span>
+                              </a>
+                            </span>
+                            -->
+                            <!-- Code Link. -->
+                            <span class="link-block">
                 <a href="https://github.com/googleinterns/IBRNet"
                    class="external-link button is-normal is-rounded is-dark">
 <!--                   class="external-link button is-normal is-rounded is-dark">-->
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                      <i class="fab fa-github  is-size-4"></i>
                   </span>
                   <span>Code</span>
                   </a>
               </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
+<center>
+    <section class="section is-center">
+        <div class="container">
+            <div class="column is-centered">
+                <h2 class="title is-center">Denoising of Real-World Low-Light Scene</h2>
+                <h6> You can cycle through the images by pressing key <span class="rcorners"> 1 </span> to <span class="rcorners"> 6 </span> . </h6>
+<!--                    <span class="fa-stack fa-lg">-->
+<!--                <i class="far fa-square is-size-2"></i>-->
+<!--                <strong class="fa-stack-1x is-size-6">-->
+<!--                    1-->
+<!--                </strong>-->
+<!--            </span>-->
+<!--                    to-->
+<!--                    <span class="fa-stack fa-lg">-->
+<!--                <i class="far fa-square is-size-2"></i>-->
+<!--                <strong class="fa-stack-1x is-size-6">-->
+<!--                    6-->
+<!--                </strong>-->
+<!--            </span>-->
 
-<section class="section">
-  <div class="container">
-<!--    <div class="container is-centered">-->
-<!--      <div class="column is-centered">-->
-        <h2 class="title">Denoising of low-light scene</h2>
-        <p>You can cycle through the images by pressing key '1' to '6'. </p>
-        <p>The low-light scenes was photographed with a Google Pixel 4 phone.</p>
-        <p><br></p>
-          <table>
-              <tr>
-                  <th>
-                      <a href='images/real/0/black.png' > <img id="viewer"  onload="setBorder(this);" src="images/real/0/black.png"></a>
-                      <br/>
-                  </th>
-                  <th>
-                      <p class='thumbnail_title'>Dark frame</p>
-                      <img class='thumbnail'
-                           id='black'
-                           onload="setBorder(this);"
-                           src='images/real/0/black.png'
-                           onClick="replaceImage(this,viewer);"
-                           alt="low light input"/>
+                <p>The low-light scenes was photographed with a Google Pixel 4 phone.</p>
+                <p><br></p>
+                <span class="link-block" onclick="change_scene(0)">
+                <span class="external-link button is-rounded is-dark">
+                  <p>Porch</p>
+                </span>
+              </span>
 
-                      <p class='thumbnail_title'>Pre-processed frame</p>
-                      <img class='thumbnail'
-                           id='pre' onload="setBorder(this);"
-                           src='images/real/0/pre.png'
-                           onClick="replaceImage(this,viewer);" />
+                <span class="link-block" onclick="change_scene(1)">
+                <span class="external-link button is-normal is-rounded is-dark">
+                  <p>Lettuces</p>
+                </span>
+              </span>
+                <p><br></p>
+                <table id="real_world_denoising">
+                    <th>
+                        <a href='images/real/0/dark.png'> <img id="viewer" onload="setBorder(this);"
+                                                               src="images/real/0/dark.png"></a>
+                        <br/>
+                    </th>
+                    <th>
+                        <p class='thumbnail_title'>Dark frame</p>
+                        <img class='thumbnail'
+                             id='dark'
+                             onload="setBorder(this);"
+                             src='images/real/0/dark.png'
+                             onClick="replaceImage(this,viewer);"
+                             alt="low light input"/>
 
-                      <p class='thumbnail_title'>Burst average</p>
-                      <img class='thumbnail'
-                           id='avg'
-                           onload="setBorder(this);"
-                           src='images/real/0/avg.png'
-                           onClick="replaceImage(this,viewer);" />
+                        <p class='thumbnail_title'>Pre-processed frame</p>
+                        <img class='thumbnail'
+                             id='pre' onload="setBorder(this);"
+                             src='images/real/0/pre.png'
+                             onClick="replaceImage(this,viewer);"/>
 
-                      <p class='thumbnail_title'>BPN</p>
-                      <img class='thumbnail'
-                           id='bpn'
-                           onload="setBorder(this);"
-                           src='images/real/0/bpn.png'
-                           onClick="replaceImage(this,viewer);" />
+                        <p class='thumbnail_title'>Burst average</p>
+                        <img class='thumbnail'
+                             id='avg'
+                             onload="setBorder(this);"
+                             src='images/real/0/avg.png'
+                             onClick="replaceImage(this,viewer);"/>
 
-                      <p class='thumbnail_title'>DeepRep</p>
-                      <img class='thumbnail'
-                           id='deeprep'
-                           onload="setBorder(this);"
-                           src='images/real/0/deeprep.png'
-                           onClick="replaceImage(this,viewer);" />
+                        <p class='thumbnail_title'>BPN</p>
+                        <img class='thumbnail'
+                             id='bpn'
+                             onload="setBorder(this);"
+                             src='images/real/0/bpn.png'
+                             onClick="replaceImage(this,viewer);"/>
 
-                      <p class='thumbnail_title'>NAN (Ours)</p>
-                      <img class='thumbnail'
-                           id='nan'
-                           onload="setBorder(this);"
-                           src='images/real/0/nan.png'
-                           onClick="replaceImage(this,viewer);" />
-                  </th>
-              </tr>
-          </table>
+                        <p class='thumbnail_title'>DeepRep</p>
+                        <img class='thumbnail'
+                             id='deeprep'
+                             onload="setBorder(this);"
+                             src='images/real/0/deeprep.png'
+                             onClick="replaceImage(this,viewer);"/>
 
-          <hr/>
-<!--      </div>-->
-<!--    </div>-->
-  </div>
-</section>
+                        <p class='thumbnail_title'>NAN (Ours)</p>
+                        <img class='thumbnail'
+                             id='nan'
+                             onload="setBorder(this);"
+                             src='images/real/0/nan.png'
+                             onClick="replaceImage(this,viewer);"/>
+                    </th>
+
+
+                    <script>
+                        function change_scene(id) {
+                            viewer.src = "images/real/" + id + "/dark.png";
+                            dark.src = "images/real/" + id + "/dark.png";
+                            pre.src = "images/real/" + id + "/pre.png";
+                            avg.src = "images/real/" + id + "/avg.png";
+                            deeprep.src = "images/real/" + id + "/deeprep.png";
+                            bpn.src = "images/real/" + id + "/bpn.png";
+                            nan.src = "images/real/" + id + "/nan.png";
+                            // replaceImage(dark, viewer)
+                        }
+                    </script>
+                </table>
+
+
+                <hr/>
+            </div>
+            <!--    </div>-->
+        </div>
+    </section>
+</center>
+
 
 <script>
-document.onready = function() {
-	$("#viewer").elevateZoom(); // start zoom
-	setTimeout(function() { replaceImage(black,viewer); }, 500); // make sure everything is loaded and set image
-}
-document.onkeydown = keyHandler;
+    document.onready = function () {
+        document.getElementById("viewer").elevateZoom(); // start zoom
+        setTimeout(function () {
+            replaceImage(black, viewer);
+        }, 500); // make sure everything is loaded and set image
+    }
+    document.onkeydown = keyHandler;
 </script>
 
 <!--abstract-->
 <section class="section">
-  <div class="container">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-          Burst denoising is now more relevant than ever, as computational photography helps overcome sensitivity issues
-            inherent in mobile phones and small cameras. A major challenge in burst-denoising is in coping with pixel
-            misalignment, which was so far handled with rather simplistic assumptions of simple motion, or the ability
-            to align in pre-processing. Such assumptions are not realistic in the presence of large motion and high
-            levels of noise. We show that Neural Radiance Fields (NeRFs), originally suggested for physics-based
-            novel-view rendering, can serve as a powerful framework for burst denoising. NeRFs have an inherent
-            capability of handling noise as they integrate information from multiple images, but they are limited in
-            doing so, mainly since they build on pixel-wise operations which are suitable to ideal imaging conditions.
-            Our approach, termed NAN, leverages inter-view and spatial information in NeRFs to better deal with noise.
-            It achieves state-of-the-art results in burst denoising and is especially successful in coping with large
-            movement and occlusions, under very high levels of noise. With the rapid advances in accelerating NeRFs,
-            it could provide a powerful platform for denoising in challenging environments.
-          </p>
+    <div class="container">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-two-thirds">
+                <h2 class="title is-2">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Burst denoising is now more relevant than ever, as computational photography helps overcome
+                        sensitivity issues
+                        inherent in mobile phones and small cameras. A major challenge in burst-denoising is in coping
+                        with pixel
+                        misalignment, which was so far handled with rather simplistic assumptions of simple motion, or
+                        the ability
+                        to align in pre-processing. Such assumptions are not realistic in the presence of large motion
+                        and high
+                        levels of noise. We show that Neural Radiance Fields (NeRFs), originally suggested for
+                        physics-based
+                        novel-view rendering, can serve as a powerful framework for burst denoising. NeRFs have an
+                        inherent
+                        capability of handling noise as they integrate information from multiple images, but they are
+                        limited in
+                        doing so, mainly since they build on pixel-wise operations which are suitable to ideal imaging
+                        conditions.
+                        Our approach, termed NAN, leverages inter-view and spatial information in NeRFs to better deal
+                        with noise.
+                        It achieves state-of-the-art results in burst denoising and is especially successful in coping
+                        with large
+                        movement and occlusions, under very high levels of noise. With the rapid advances in
+                        accelerating NeRFs,
+                        it could provide a powerful platform for denoising in challenging environments.
+                    </p>
 
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 <!--/ Abstract. -->
 
 
 <section class="section" id="BibTeX">
-  <div class="container content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
+    <div class="container content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
       @inproceedings{pearl2022noiseaware,
         title={NAN: Noise-Aware NeRFs for Burst-Denoising},
         author={Pearl, Naama and Treibitz, Tali and Korman, Simon},
@@ -249,18 +302,19 @@ document.onkeydown = keyHandler;
         year={2022}
       }
 </code></pre>
-  </div>
+    </div>
 </section>
 
 
 <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-        <div class="content">
-            This website interface adapted from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> and
-            <a href="http://jankautz.com/supplemental/FlexISP/">FlexISP</a>.
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="content">
+                The website interface is adapted from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>
+                and
+                <a href="http://jankautz.com/supplemental/FlexISP/">FlexISP</a>.
+            </div>
         </div>
-      </div>
     </div>
 </footer>
 
