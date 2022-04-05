@@ -167,7 +167,7 @@
                 <p><br></p>
                 <table id="real_world_denoising">
                     <th>
-                        <a href='images/real/0/dark.png'> <img id="viewer" onload="setBorder(this);"
+                        <a href='images/real/0/dark.png'> <img id="viewer" onload="setBorderReal(this);"
                                                                src="images/real/0/dark.png"></a>
                         <br/>
                     </th>
@@ -175,42 +175,42 @@
                         <p class='thumbnail_title'>Dark frame</p>
                         <img class='thumbnail'
                              id='dark'
-                             onload="setBorder(this);"
+                             onload="setBorderReal(this);"
                              src='images/real/0/dark.png'
                              onClick="replaceImage(this,viewer);"
                              alt="low light input"/>
 
                         <p class='thumbnail_title'>Pre-processed frame</p>
                         <img class='thumbnail'
-                             id='pre' onload="setBorder(this);"
+                             id='pre' onload="setBorderReal(this);"
                              src='images/real/0/pre.png'
                              onClick="replaceImage(this,viewer);"/>
 
                         <p class='thumbnail_title'>Burst average</p>
                         <img class='thumbnail'
                              id='avg'
-                             onload="setBorder(this);"
+                             onload="setBorderReal(this);"
                              src='images/real/0/avg.png'
                              onClick="replaceImage(this,viewer);"/>
 
                         <p class='thumbnail_title'>BPN</p>
                         <img class='thumbnail'
                              id='bpn'
-                             onload="setBorder(this);"
+                             onload="setBorderReal(this);"
                              src='images/real/0/bpn.png'
                              onClick="replaceImage(this,viewer);"/>
 
                         <p class='thumbnail_title'>DeepRep</p>
                         <img class='thumbnail'
                              id='deeprep'
-                             onload="setBorder(this);"
+                             onload="setBorderReal(this);"
                              src='images/real/0/deeprep.png'
                              onClick="replaceImage(this,viewer);"/>
 
                         <p class='thumbnail_title'>NAN (Ours)</p>
                         <img class='thumbnail'
                              id='nan'
-                             onload="setBorder(this);"
+                             onload="setBorderReal(this);"
                              src='images/real/0/nan.png'
                              onClick="replaceImage(this,viewer);"/>
                     </th>
@@ -246,7 +246,7 @@
             replaceImage(black, viewer);
         }, 500); // make sure everything is loaded and set image
     }
-    document.onkeydown = keyHandler;
+    document.onkeydown = keyHandlerReal;
 </script>
 
 <!--abstract-->

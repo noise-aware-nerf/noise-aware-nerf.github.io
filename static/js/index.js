@@ -81,7 +81,7 @@ document.onready = function() {
 
 
 //document.onkeydown = function(event) {
-function keyHandler(event) {
+function keyHandlerReal(event) {
 	var key_code = event.keyCode;
 
 	element = document.getElementById('viewer');
@@ -111,6 +111,39 @@ function keyHandler(event) {
 	}
 }
 
+
+function keyHandlerSyn(event) {
+	let key_code = event.keyCode;
+
+	switch( key_code ) {
+		// case 48: // 0
+		// 	replaceImage(img0,viewer);
+		// 	break;
+		case 49: // 1
+			replaceImage(noisy,main_syn);
+			break;
+		case 50: // 2
+			replaceImage(gt,main_syn);
+			break;
+		case 51: // 3
+			replaceImage(avg,main_syn);
+			break;
+		case 52: // 4
+			replaceImage(bpn,main_syn);
+			break;
+		case 53: // 5
+			replaceImage(deeprep,main_syn);
+			break;
+		case 54: // 6
+			replaceImage(ibrnetn,main_syn);
+			break;
+		case 55: // 7
+			replaceImage(nan,main_syn);
+			break;
+	}
+}
+
+
 function replaceImage(newimage,image)
 {
 	image.src               = newimage.src;
@@ -125,7 +158,7 @@ function replaceImage(newimage,image)
 }
 
 
-function setBorder(image)
+function setBorderReal(image)
 {
 	if(image.id === "black")
 	{
@@ -151,4 +184,42 @@ function setBorder(image)
 	{
 		image.style.borderColor='#009933';
 	}
+}
+
+function SynColors(id)
+{
+	if(id === "bpn")
+	{
+		return '#023047';
+	}
+	else if(id === "deeprep")
+	{
+		return '#126782';
+	}
+	else if(id === "ibrnetn")
+	{
+		return '#219EBC';
+	}
+
+	else if(id === "nan")
+	{
+		return '#8ECAE6';
+	}
+	else if(id === "noisy")
+	{
+		return '#FFB703';
+	}
+	else if(id === "gt")
+	{
+		return '#FD9E02';
+	}
+	else if(id === "avg")
+	{
+		return '#FB8500';
+	}
+}
+function setBorderSyn(image)
+{
+	console.log("setBorderSyn " + image.id)
+	image.style.borderColor = SynColors(image.id);
 }
