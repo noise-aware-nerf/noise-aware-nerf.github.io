@@ -216,10 +216,7 @@ img
     flex: 20%;
     display: flex;
     flex-wrap: wrap;
-    align-self: center;
-    align-content: center;
-    align-items: center;
-    padding-top: 200px;
+    align-self: self-end;
 }
 
 .column-thumbnail {
@@ -245,11 +242,24 @@ img
     cursor: pointer;
     background-color: white;
     color: black;
-    border: 4px solid #8ECAE6;
+    border: 0px solid #8ECAE6;
     border-radius: 10px;
 }
 
 .button-syn:hover {
     background-color: #8ECAE1;
     color: white;
+}
+
+.figure {
+    border: 0;
+}
+
+.llff-viewer {
+    border-color: #FFB703;
+}
+
+.img-teaser {
+    padding: 10px;
+    border: 0;
 }

@@ -81,67 +81,80 @@ document.onready = function() {
 
 
 //document.onkeydown = function(event) {
-function keyHandlerReal(event) {
+function keyHandler(event) {
 	var key_code = event.keyCode;
-
-	element = document.getElementById('viewer');
 
 	switch( key_code ) {
 	// case 48: // 0
 	// 	replaceImage(img0,viewer);
 	// 	break;
 	case 49: // 1
-		replaceImage(dark,viewer);
+		replaceImage(real_dark,real_main);
+		replaceImage(syn_noisy,syn_main);
 		break;
 	case 50: // 2
-		replaceImage(pre,viewer);
+		replaceImage(real_pre,real_main);
+		replaceImage(syn_gt,syn_main);
+
 		break;
 	case 51: // 3
-		replaceImage(avg,viewer);
+		replaceImage(real_avg,real_main);
+		replaceImage(syn_avg,syn_main);
+
 		break;
 	case 52: // 4
-		replaceImage(bpn,viewer);
+		replaceImage(real_bpn,real_main);
+		replaceImage(syn_bpn,syn_main);
+
 		break;
 	case 53: // 5
-		replaceImage(deeprep,viewer);
+		replaceImage(real_deeprep,real_main);
+		replaceImage(syn_deeprep,syn_main);
+
 		break;
 	case 54: // 6
-		replaceImage(nan,viewer);
+		replaceImage(real_ibrnetn,real_main);
+		replaceImage(syn_ibrnetn,syn_main);
+
+		break;
+	case 55: // 7
+		replaceImage(real_nan,real_main);
+		replaceImage(syn_nan,syn_main);
 		break;
 	}
 }
 
 
-function keyHandlerSyn(event) {
-	let key_code = event.keyCode;
-
-	switch( key_code ) {
-		// case 48: // 0
-		// 	replaceImage(img0,viewer);
-		// 	break;
-		case 49: // 1
-			replaceImage(noisy,main_syn);
-			break;
-		case 50: // 2
-			replaceImage(gt,main_syn);
-			break;
-		case 51: // 3
-			replaceImage(avg,main_syn);
-			break;
-		case 52: // 4
-			replaceImage(bpn,main_syn);
-			break;
-		case 53: // 5
-			replaceImage(deeprep,main_syn);
-			break;
-		case 54: // 6
-			replaceImage(ibrnetn,main_syn);
-			break;
-		case 55: // 7
-			replaceImage(nan,main_syn);
-			break;
-	}
-}
+// function keyHandlerSyn(event) {
+// 	let key_code = event.keyCode;
+//
+// 	switch( key_code ) {
+// 		// case 48: // 0
+// 		// 	replaceImage(img0,viewer);
+// 		// 	break;
+// 		case 49: // 1
+// 			replaceImage(noisy,main_llff);
+// 			break;
+// 		case 50: // 2
+// 			replaceImage(gt,main_llff);
+// 			break;
+// 		case 51: // 3
+// 			replaceImage(avg,main_llff);
+// 			break;
+// 		case 52: // 4
+// 			replaceImage(bpn,main_llff);
+// 			break;
+// 		case 53: // 5
+// 			replaceImage(deeprep,main_llff);
+// 			break;
+// 		case 54: // 6
+// 			replaceImage(ibrnetn,main_llff);
+// 			break;
+// 		case 55: // 7
+// 			replaceImage(nan,main_llff);
+// 			break;
+// 	}
+// }
 
 
 function replaceImage(newimage,image)
@@ -158,68 +171,87 @@ function replaceImage(newimage,image)
 }
 
 
-function setBorderReal(image)
-{
-	if(image.id === "black")
-	{
-		image.style.borderColor='#000000';
-	}
-	else if(image.id === "pre")
-	{
-		image.style.borderColor='#3388FF';
-	}
-	else if(image.id === "avg")
-	{
-		image.style.borderColor='#2244AA';
-	}
-	else if(image.id === "bpn")
-	{
-		image.style.borderColor='#FFDD00';
-	}
-	else if(image.id === "deeprep")
-	{
-		image.style.borderColor='#CC5C00';
-	}
-	else if(image.id === "nan")
-	{
-		image.style.borderColor='#009933';
-	}
-}
+
 
 function SynColors(id)
 {
-	if(id === "bpn")
+	if(id === "syn_bpn")
 	{
 		return '#023047';
 	}
-	else if(id === "deeprep")
+	else if(id === "syn_deeprep")
 	{
 		return '#126782';
 	}
-	else if(id === "ibrnetn")
+	else if(id === "syn_ibrnetn")
 	{
 		return '#219EBC';
 	}
 
-	else if(id === "nan")
+	else if(id === "syn_nan")
 	{
 		return '#8ECAE6';
 	}
-	else if(id === "noisy")
+	else if(id === "syn_noisy")
 	{
 		return '#FFB703';
 	}
-	else if(id === "gt")
+	else if(id === "syn_gt")
 	{
 		return '#FD9E02';
 	}
-	else if(id === "avg")
+	else if(id === "syn_avg")
 	{
 		return '#FB8500';
 	}
 }
+
+
+function RealColors(id)
+{
+	if(id === "real_bpn")
+	{
+		return '#023047';
+	}
+	else if(id === "real_deeprep")
+	{
+		return '#126782';
+	}
+	else if(id === "real_ibrnetn")
+	{
+		return '#219EBC';
+	}
+
+	else if(id === "real_nan")
+	{
+		return '#8ECAE6';
+	}
+	else if(id === "real_dark")
+	{
+		return '#FFB703';
+	}
+	else if(id === "real_pre")
+	{
+		return '#FD9E02';
+	}
+	else if(id === "real_avg")
+	{
+		return '#FB8500';
+	}
+}
+
+
 function setBorderSyn(image)
 {
-	console.log("setBorderSyn " + image.id)
 	image.style.borderColor = SynColors(image.id);
+}
+
+function setTextSyn(text, id)
+{
+	text.style.color = SynColors(id);
+}
+
+function setBorderReal(image)
+{
+	image.style.borderColor = RealColors(image.id);
 }
