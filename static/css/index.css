@@ -79,6 +79,9 @@ body {
 
 .author-block {
   display: inline-block;
+    padding-right: 3px;
+    padding-bottom: 10px;
+
 }
 
 .institution-block {
@@ -87,6 +90,7 @@ body {
     justify-content: center;
     /*align-items: center;*/
     gap: 30px;
+    padding-bottom: 10px;
 }
 
 .instit {
@@ -168,27 +172,32 @@ body {
 
 
 
-img.thumbnail
-{
-	border-style: solid;
-	width: 100px;
-    margin-left: 2px;
-    margin-bottom: 1px;
-}
+/*img.thumbnail*/
+/*{*/
+/*	border-style: solid;*/
+/*	width: 100px;*/
+/*    margin-left: 2px;*/
+/*    margin-bottom: 1px;*/
+/*}*/
 
-p.thumbnail_title
-{
-	font-size: 15px;
-    margin-left: 2px;
-}
+/*p.thumbnail_title*/
+/*{*/
+/*	font-size: 15px;*/
+/*    margin-left: 2px;*/
+/*}*/
 
-img
-{
+img {
 	border-style: solid;
 	border-width: 5px;
 	border-color: black;
-    width: 890px
+    width: 890px;
+    cursor: pointer;
 }
+
+img:hover {
+
+}
+
 
 
 .rcorners {
@@ -253,6 +262,7 @@ img
 
 .figure {
     border: 0;
+    cursor: unset;
 }
 
 .llff-viewer {
