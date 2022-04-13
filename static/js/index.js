@@ -87,30 +87,36 @@ function keyHandler(event) {
 	case 49: // 1
 		replaceImage(real_dark,real_main);
 		replaceImage(syn_noisy,syn_main);
+		replaceImage(syn_noisy_nv,syn_main_nv);
 		break;
 	case 50: // 2
 		replaceImage(real_pre,real_main);
 		replaceImage(syn_gt,syn_main);
+		replaceImage(syn_gt_nv,syn_main_nv);
 
 		break;
 	case 51: // 3
 		replaceImage(real_avg,real_main);
 		replaceImage(syn_avg,syn_main);
+		replaceImage(syn_avg_nv,syn_main_nv);
 
 		break;
 	case 52: // 4
 		replaceImage(real_bpn,real_main);
 		replaceImage(syn_bpn,syn_main);
+		replaceImage(syn_ibrnet_nv,syn_main_nv);
 
 		break;
 	case 53: // 5
 		replaceImage(real_deeprep,real_main);
 		replaceImage(syn_deeprep,syn_main);
+		replaceImage(syn_ibrnetn_nv,syn_main_nv);
 
 		break;
 	case 54: // 6
 		replaceImage(real_ibrnetn,real_main);
 		replaceImage(syn_ibrnetn,syn_main);
+		replaceImage(syn_nan_nv,syn_main_nv);
 
 		break;
 	case 55: // 7
@@ -155,6 +161,16 @@ function SynColors(id)
 	else if(id === "syn_nan"){return colors[7];}
 }
 
+function SynColorsNV(id)
+{
+	if (id === "syn_noisy_nv") {return colors[1];}
+	else if(id === "syn_gt_nv") {return colors[2];}
+	else if(id === "syn_avg_nv") {return colors[3];}
+	else if(id === "syn_ibrnet_nv") {return colors[5];}
+	else if(id === "syn_ibrnetn_nv") {return colors[6];}
+	else if(id === "syn_nan_nv"){return colors[7];}
+}
+
 
 function RealColors(id)
 {
@@ -171,6 +187,11 @@ function RealColors(id)
 function setBorderSyn(image)
 {
 	image.style.borderColor = SynColors(image.id);
+}
+
+function setBorderSynNV(image)
+{
+	image.style.borderColor = SynColorsNV(image.id);
 }
 
 function setBorderReal(image)
