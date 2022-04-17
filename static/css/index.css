@@ -273,3 +273,29 @@ img:hover {
     padding: 10px;
     border: 0;
 }
+
+.citation {
+    color: inherit;
+    cursor: inherit;
+}
+
+.ref {
+    color: hsl(204, 86%, 53%) !important;
+}
+
+.ref:hover {
+    text-decoration: underline;
+}
+
+.citation-list {
+    list-style-position: outside;
+}
+
+.citation-item {
+    counter-increment: OrderedList;
+    list-style: none;
+    list-style-position: outside;
+}
+.citation-item:before {
+    content: "["  counter(OrderedList) "] ";
+}
