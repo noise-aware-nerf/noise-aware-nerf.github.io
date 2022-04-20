@@ -153,7 +153,7 @@ let colors = ['#DFFF00',
 	'#40E0D0',
 	'#6495ED',
 	'#CCCCFF',
-    '#7D3C98 '];
+    '#7D3C98'];
 
 function SynColors(id)
 {
