@@ -102,26 +102,30 @@ function keyHandler(event) {
 
 		break;
 	case 52: // 4
-		replaceImage(real_bpn,real_main);
+		replaceImage(real_hdr,real_main);
 		replaceImage(syn_bpn,syn_main);
 		replaceImage(syn_ibrnet_nv,syn_main_nv);
 
 		break;
 	case 53: // 5
-		replaceImage(real_deeprep,real_main);
+		replaceImage(real_bpn,real_main);
 		replaceImage(syn_deeprep,syn_main);
 		replaceImage(syn_ibrnetn_nv,syn_main_nv);
 
 		break;
 	case 54: // 6
-		replaceImage(real_ibrnetn,real_main);
+		replaceImage(real_deeprep,real_main);
 		replaceImage(syn_ibrnetn,syn_main);
 		replaceImage(syn_nan_nv,syn_main_nv);
 
 		break;
 	case 55: // 7
-		replaceImage(real_nan,real_main);
+		replaceImage(real_ibrnetn,real_main);
 		replaceImage(syn_nan,syn_main);
+
+		break;
+	case 56: // 8
+		replaceImage(real_nan,real_main);
 		break;
 	}
 }
@@ -148,7 +152,8 @@ let colors = ['#DFFF00',
 	'#9FE2BF',
 	'#40E0D0',
 	'#6495ED',
-	'#CCCCFF'];
+	'#CCCCFF',
+    '#7D3C98 '];
 
 function SynColors(id)
 {
@@ -181,6 +186,7 @@ function RealColors(id)
 	else if(id === "real_deeprep") {return colors[5];}
 	else if(id === "real_ibrnetn") {return colors[6];}
 	else if(id === "real_nan") {return colors[7];}
+	else if(id === "real_hdr") {return colors[8];}
 }
 
 
